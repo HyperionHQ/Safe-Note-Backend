@@ -21,6 +21,11 @@ const corsOpt = {
 }
 app.use(cors(corsOpt))
 
+//homePage route
+app.get('/',(req, res)=>{
+    res.send("API Working....")
+})
+
 const notesRouter = require('./routes/notes')
 app.use('/notes', notesRouter)
 
